@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Week2b MVC and Express</title>
+    <!-- Notes from slides:
+        **MVC [Model, View, Controller]
+            Seperate the Model/View/Controller into seperate areas
+                to make customization easy and safe
+            **Model:
+                Data Structure; The database and templates of objects
+                Stored and placed on MongoDB using Mongoose
+            **Controller:
+                *GLUES the Model and Controller together*
+                Process Requests, intereact with Model as needed, return data-powered views
+                API Controller (REST/CRUD)
+            **View
+                How the website looks through HTML using CSS/Javascript/Assets
+
+        **Node.js
+            Running Javascript outside of the browser
+            Allows us to create local servers for testing
+           **MODULES
+                require the file system module
+                var fs = require ('fs');
+
+                require the http module
+                var http = require ('htt')
+
+                *NEW* const instead of var
+
+                **Creating server
+                http.createServer(function(req,res){
+                    res.writeHead(200);
+                    res.end('Hello World');
+                }).listen(3000); *3000 is the portNum
+            ^Review from week3a script.js
+
+            
+           **Express:
+                SEE: https://expressjs.com/ 
+                Simple and fast way to get a node.js server up and running
+
+           **NPM [Node Package Manager]
+                STEPS TO USE:
+                    Use Terminal/Command Prompt
+                    cd 'directory'
+                    npm init
+                        *follow prompt*
+                    check package.json with 'dir'
+                    npm install
+                    npm install express --save
+
+                    npm install nodemon -g
+                        '-g' is the 'global' flag
+                        watches files for changes and restarts server when you save
+                SEE: index.js for in-class code
+
+           **Middleware
+                app.use(...)
+                    https://expressjs.com/en/4x/api.html#app.use
+                USING for static files
+                    
+    -->
+    </head>
+    
+    <body>
+
+    </body>
+</html>
