@@ -13,7 +13,7 @@ var app = express();
     //express (See slide 28)
         //app.METHOD(PATH, HANDLER)
 
-app.use(function(req, res, next){
+app.use(function(req, res, next) {
     console.log('request to ' + req.url);
     next();    
 })
@@ -34,18 +34,19 @@ app.get('/profile/:name', function(req, res){
     //res.send({
     //    name: req.params.name;
     //});
-})
+});
 
 //MIDDLEWARE for files
 //Makes it so that any files we pull from another folder can get added onto the URL we are using
 //SEE FOLDER: public for HTML file being used in example
+//URL example in THIS CASE: localhost:3001/index.html
 app.use(express.static(__dirname + '/public'));
 
 //CATCH ALL 
 app.use(function(req, res, next){
     res.status(404);
     res.send('404 - Not Found');
-})
+});
 
 //ORDER MATTERS
     //THIS WILDCARD SHOULD BE LAST
